@@ -40,7 +40,7 @@ $userEmail = $isLoggedIn ? $_SESSION['user']['email'] : '';
                 <li><span><?php echo htmlspecialchars($userEmail); ?></span></li>
                 <li><button onclick="logout()">로그아웃</button></li>
             <?php else: ?>
-                <li><a href="/pages/login.html">로그인</a></li>
+                <li><a href="/sewdish/pages/login.html">로그인</a></li>
             <?php endif; ?>
         </ul>
     </nav>
