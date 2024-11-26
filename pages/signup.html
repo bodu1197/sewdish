@@ -1,0 +1,239 @@
+<?php
+session_start();
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+$error = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $file = 'data/users.json';
+    
+    try {
+        // 디렉토리 존재 여부 확인 및 생성
+        $dir = 'data';
+        if (!file_exists($dir)) {
+            if (!mkdir($dir, 0777, true)) {
+                throw new Exception("데이터 디렉토리 생성 실패: " . $dir);
+            }
+        }
+
+        // 입력값 검증
+        if (strlen($_POST['userPw']) < 6) {
+            $error = "비밀번호는 6자 이상이어야 합니다. (현재: " . strlen($_POST['userPw']) . "자)";
+        }
+        elseif ($_POST['userPw'] !== $_POST['userPwCheck']) {
+            $error = "비밀번호가 일치하지 않습니다.";
+        }
+        elseif (!filter_var($_POST['userEmail'], FILTER_VALIDATE_EMAIL)) {
+            $error = "올바른 이메일 형식이 아닙니다. (입력값: " . htmlspecialchars($_POST['userEmail']) . ")";
+        }
+        else {
+            // users.json 파일이 없으면 생성
+            if (!file_exists($file)) {
+                if (!file_put_contents($file, json_encode(['users' => []]))) {
+                    throw new Exception("users.json 파일 생성 실패");
+                }
+            }
+            
+            // 현재 데이터 읽기
+            $jsonContent = file_get_contents($file);
+            if ($jsonContent === false) {
+                throw new Exception("users.json 파일 읽기 실패");
+            }
+            
+            $jsonData = json_decode($jsonContent, true);
+            if ($jsonData === null) {
+                throw new Exception("JSON 디코딩 실패: " . json_last_error_msg());
+            }
+            
+            // 이메일 중복 체크
+            foreach ($jsonData['users'] as $user) {
+                if ($user['userEmail'] === $_POST['userEmail']) {
+                    $error = "이미 가입된 이메일입니다: " . htmlspecialchars($_POST['userEmail']);
+                    break;
+                }
+            }
+            
+            // 오류가 없으면 저장 진행
+            if (empty($error)) {
+                // 새 사용자 데이터
+                $newUser = [
+                    'userEmail' => $_POST['userEmail'],
+                    'userPw' => password_hash($_POST['userPw'], PASSWORD_DEFAULT),
+                    'createdAt' => date('Y-m-d H:i:s')
+                ];
+                
+                // 새 사용자 추가
+                $jsonData['users'][] = $newUser;
+                
+                // 파일에 저장
+                if (!file_put_contents($file, json_encode($jsonData, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE))) {
+                    throw new Exception("users.json 파일 저장 실패");
+                }
+
+                echo "<script>
+                    alert('회원가입이 완료되었습니다.');
+                    window.location.href = 'login.php';
+                </script>";
+                exit;
+            }
+        }
+    } catch (Exception $e) {
+        $error = "회원가입 처리 중 오류가 발생했습니다: " . $e->getMessage();
+        error_log("회원가입 오류: " . $e->getMessage());
+    }
+}
+?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 - MA-LAB</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="password"],
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            background: #45a049;
+        }
+
+        .error-message {
+            color: #ff0000;
+            background-color: #ffe6e6;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .login-link a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>회원가입</h1>
+        
+        <?php if (!empty($error)): ?>
+            <div class="error-message"><?php echo $error; ?></div>
+        <?php endif; ?>
+        
+        <form method="POST" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="userEmail">이메일</label>
+                <input type="email" id="userEmail" name="userEmail" required
+                       value="<?php echo isset($_POST['userEmail']) ? htmlspecialchars($_POST['userEmail']) : ''; ?>">
+            </div>
+
+            <div class="form-group">
+                <label for="userPw">비밀번호 (6자 이상)</label>
+                <input type="password" id="userPw" name="userPw" required>
+            </div>
+
+            <div class="form-group">
+                <label for="userPwCheck">비밀번호 확인</label>
+                <input type="password" id="userPwCheck" name="userPwCheck" required>
+            </div>
+
+            <button type="submit" class="submit-btn">회원가입</button>
+        </form>
+
+        <div class="login-link">
+            이미 계정이 있으신가요? <a href="login.php">로그인</a>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            const userPw = document.getElementById('userPw').value;
+            const userPwCheck = document.getElementById('userPwCheck').value;
+            const userEmail = document.getElementById('userEmail').value;
+
+            if (userPw.length < 6) {
+                alert('비밀번호는 6자 이상이어야 합니다.');
+                return false;
+            }
+
+            if (userPw !== userPwCheck) {
+                alert('비밀번호가 일치하지 않습니다.');
+                return false;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(userEmail)) {
+                alert('올바른 이메일 형식이 아닙니다.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

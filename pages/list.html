@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>매장 목록 - MA-LAB</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;background:#f8f9fa;color:#333;padding-bottom:60px}.mobile-header{position:fixed;top:0;left:0;right:0;height:56px;background:#fff;display:flex;justify-content:space-between;align-items:center;padding:0 16px;box-shadow:0 2px 4px rgba(0,0,0,.1);z-index:1000}.logo{font-size:24px;font-weight:700;color:#333;text-decoration:none}.menu-trigger{border:none;background:0 0;padding:8px;cursor:pointer;display:flex;align-items:center;justify-content:center}.menu-icon{width:24px;height:18px;position:relative;display:flex;flex-direction:column;justify-content:space-between}.menu-icon .bar{display:block;width:100%;height:2px;background-color:#333;transition:transform .3s ease,opacity .3s ease}.menu-trigger[aria-expanded=true] .bar:first-child{transform:translateY(8px) rotate(45deg)}.menu-trigger[aria-expanded=true] .bar:nth-child(2){opacity:0}.menu-trigger[aria-expanded=true] .bar:last-child{transform:translateY(-8px) rotate(-45deg)}.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.dropdown-menu{position:fixed;top:56px;left:0;right:0;background:#fff;padding:16px;box-shadow:0 2px 4px rgba(0,0,0,.1);transform:translateY(-100%);transition:transform .3s ease;z-index:999}.dropdown-menu.active{transform:translateY(0)}.dropdown-menu ul{list-style:none}.dropdown-menu li{padding:12px 0;border-bottom:1px solid #eee}.dropdown-menu a,.dropdown-menu button{color:#333;text-decoration:none;display:block;width:100%;text-align:left;background:0 0;border:none;font-size:inherit;cursor:pointer}.bottom-nav{position:fixed;bottom:0;left:0;right:0;height:60px;background:#fff;display:flex;justify-content:space-around;align-items:center;box-shadow:0 -2px 4px rgba(0,0,0,.1);z-index:1000}.nav-item{display:flex;flex-direction:column;align-items:center;text-decoration:none;color:#666;padding:8px}.nav-item.active{color:#007bff}.nav-item svg{width:24px;height:24px;margin-bottom:4px}.nav-item span{font-size:12px}.search-modal{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:2000;display:none}.search-modal.active{display:block}.search-content{position:absolute;bottom:0;left:0;right:0;background:#fff;border-radius:20px 20px 0 0;padding:20px;transform:translateY(100%);transition:transform .3s ease-out}.search-modal.active .search-content{transform:translateY(0)}.search-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.close-button{background:0 0;border:none;font-size:24px;cursor:pointer;padding:5px}.filter-actions{display:flex;justify-content:space-between;align-items:center;margin-top:15px;gap:10px}.reset-button{padding:8px 16px;background:#f1f3f5;border:none;border-radius:4px;cursor:pointer;white-space:nowrap}.reset-button:hover{background:#e9ecef}main{margin-top:72px;padding:16px;max-width:1200px;margin-left:auto;margin-right:auto}.search-box{display:grid;gap:16px;margin-bottom:16px}.select-group{display:flex;flex-direction:column;gap:8px}.select-group label{font-weight:500;font-size:14px}select{width:100%;padding:8px;border:1px solid #ddd;border-radius:4px;font-size:16px}.massage-types{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:8px}.massage-types button{padding:8px;border:1px solid #ddd;border-radius:4px;background:#fff;cursor:pointer;font-size:14px}.massage-types button.active{background:#007bff;color:#fff;border-color:#007bff}.stores-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}.store-card{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.1);cursor:pointer;transition:transform .2s}.store-card:hover{transform:translateY(-3px)}.store-image{width:100%;height:200px;object-fit:cover}.store-info{padding:16px}.store-title{font-size:18px;font-weight:600;margin-bottom:8px}.store-distance{color:#007bff;font-weight:500;margin-bottom:8px}.store-address,.store-phone,.store-price{font-size:14px;color:#666;margin-bottom:4px}.store-types{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}.store-type{background:#f0f0f0;padding:3px 8px;border-radius:15px;font-size:.8em;color:#666}@media (max-width:768px){.search-box{grid-template-columns:1fr}.stores-grid{grid-template-columns:1fr}}</style>
+</head>
+<body>
+    <header class="mobile-header">
+        <a href="/" class="logo">MA-LAB</a>
+        <button class="menu-trigger" id="menuTrigger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="dropdownMenu">
+            <span class="menu-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </span>
+            <span class="visually-hidden">메뉴</span>
+        </button>
+    </header>
+
+    <nav class="dropdown-menu" id="dropdownMenu">
+        <ul>
+            <li><a href="/pages/list.html">매장목록</a></li>
+            <li><a href="/pages/register.php">매장등록</a></li>
+            <li><a href="/pages/login.html">로그인</a></li>
+        </ul>
+    </nav>
+
+    <section class="search-modal" id="searchModal">
+        <div class="search-content">
+            <div class="search-header">
+                <h2>지역 검색</h2>
+                <button class="close-button" id="closeSearch">&times;</button>
+            </div>
+            <div class="search-box">
+                <div class="select-group">
+                    <label for="citySelect">시/도</label>
+                    <select id="citySelect" name="city">
+                        <option value="">시/도 선택</option>
+                    </select>
+                </div>
+                <div class="select-group">
+                    <label for="districtSelect">구/군</label>
+                    <select id="districtSelect" name="district" disabled>
+                        <option value="">구/군 선택</option>
+                    </select>
+                </div>
+                <div class="select-group">
+                    <label for="dongSelect">동/읍/면</label>
+                    <select id="dongSelect" name="dong" disabled>
+                        <option value="">동/읍/면 선택</option>
+                    </select>
+                </div>
+            </div>
+            <div class="filter-actions">
+                <div class="massage-types" role="group" aria-label="마사지 유형 필터"></div>
+                <button type="button" class="reset-button" id="resetFilters">필터 초기화</button>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div id="storeList" class="stores-grid"></div>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item" id="nearbyBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 2 L12 22 M2 12 L22 12"></path>
+            </svg>
+            <span>내 주변</span>
+        </a>
+        <a href="#" class="nav-item" data-action="search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span>지역검색</span>
+        </a>
+        <a href="#" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            <span>제휴문의</span>
+        </a>
+    </nav>
+
+    <script>let storesData=null,userLocation=null;const initApp=async()=>{try{const e=new Date().getTime(),t=await fetch(`/pages/data/shops.json?t=${e}`,{headers:{"Cache-Control":"no-cache",Pragma:"no-cache"}}),a=await t.json();storesData=a.stores||[];const n=[...new Set(storesData.flatMap(e=>e.types))];document.querySelector(".massage-types").innerHTML=n.map(e=>`<button type="button" data-type="${e}" aria-pressed="false">${e}</button>`).join(""),await initializeLocationData(),renderStores(storesData)}catch(e){console.error("초기화 실패:",e)}};function initializeLocationData(){try{const e={};storesData.forEach(t=>{const a=t.address.full.split(" "),n=a[0],s=a[1],r=a[2];e[n]||(e[n]={}),e[n][s]||(e[n][s]=[]),r&&!e[n][s].includes(r)&&e[n][s].push(r)}),initializeSelects(e)}catch(e){console.error("주소 데이터 처리 실패:",e)}}function initializeSelects(e){const t=document.getElementById("citySelect"),a=document.getElementById("districtSelect"),n=document.getElementById("dongSelect");Object.keys(e).sort().forEach(e=>{t.add(new Option(e,e))}),t.addEventListener("change",()=>{const s=t.value;a.innerHTML='<option value="">구/군 선택</option>',n.innerHTML='<option value="">동/읍/면 선택</option>',s?(Object.keys(e[s]).sort().forEach(e=>{a.add(new Option(e,e))}),a.disabled=!1,n.disabled=!0):(a.disabled=!0,n.disabled=!0),filterStores()}),a.addEventListener("change",()=>{const s=t.value,r=a.value;n.innerHTML='<option value="">동/읍/면 선택</option>',r?(e[s][r].sort().forEach(e=>{n.add(new Option(e,e))}),n.disabled=!1):n.disabled=!0,filterStores()}),n.addEventListener("change",filterStores)}function calculateDistance(e,t,a,n){const s=deg2rad(a-e),r=deg2rad(n-t),o=Math.sin(s/2)*Math.sin(s/2)+Math.cos(deg2rad(e))*Math.cos(deg2rad(a))*Math.sin(r/2)*Math.sin(r/2);return 6371*(2*Math.atan2(Math.sqrt(o),Math.sqrt(1-o)))}function deg2rad(e){return e*(Math.PI/180)}function filterStores(){if(!storesData)return;const e=document.getElementById("citySelect").value,t=document.getElementById("districtSelect").value,a=document.getElementById("dongSelect").value,n=document.querySelector(".massage-types button.active")?.dataset.type;let s=[...storesData];e&&(s=s.filter(t=>t.address.full.includes(e))),t&&(s=s.filter(e=>e.address.full.includes(t))),a&&(s=s.filter(e=>e.address.full.includes(a))),n&&(s=s.filter(e=>e.types.includes(n))),renderStores(s)}function renderStores(e){const t=document.getElementById("storeList");if(userLocation&&e.forEach(e=>{e.distance=calculateDistance(userLocation.latitude,userLocation.longitude,parseFloat(e.address.lat),parseFloat(e.address.lng))}),userLocation&&e.sort((e,t)=>e.distance-t.distance),t){const a=new Date().getTime();t.innerHTML=e.map(e=>`<article class="store-card" onclick="location.href='/pages/detail.html?id=${e.id}'"><img class="store-image" src="${e.photo}?t=${a}" alt="${e.name} 매장 이미지"><div class="store-info"><h2 class="store-title">${e.name}</h2>${e.distance?`<div class="store-distance">현재 위치에서 ${e.distance.toFixed(1)}km</div>`:""}<div class="store-address">${e.address.full}</div><div class="store-phone">${e.phone}</div><div class="store-price">${new Intl.NumberFormat("ko-KR").format(e.minPrice)}원</div><div class="store-types">${e.types.map(e=>`<span class="store-type">${e}</span>`).join("")}</div></div></article>`).join("")}}document.addEventListener("DOMContentLoaded",()=>{initApp();const e=document.getElementById("searchModal"),t=document.getElementById("closeSearch"),a=document.querySelector('.nav-item[data-action="search"]'),n=document.getElementById("resetFilters"),s=document.getElementById("menuTrigger"),r=document.getElementById("dropdownMenu");s.addEventListener("click",()=>{const e=s.getAttribute("aria-expanded")==="true";s.setAttribute("aria-expanded",!e),s.setAttribute("aria-label",e?"메뉴 열기":"메뉴 닫기"),r.classList.toggle("active")}),document.addEventListener("click",e=>{s.contains(e.target)||r.contains(e.target)||(s.setAttribute("aria-expanded","false"),s.setAttribute("aria-label","메뉴 열기"),r.classList.remove("active"))}),document.addEventListener("keydown",e=>{"Escape"===e.key&&r.classList.contains("active")&&(s.setAttribute("aria-expanded","false"),s.setAttribute("aria-label","메뉴 열기"),r.classList.remove("active"))}),a.addEventListener("click",()=>{e.classList.add("active")}),t.addEventListener("click",()=>{e.classList.remove("active")}),e.addEventListener("click",t=>{t.target===e&&e.classList.remove("active")}),n.addEventListener("click",()=>{document.getElementById("citySelect").value="",document.getElementById("districtSelect").value="",document.getElementById("dongSelect").value="",document.querySelectorAll(".massage-types button").forEach(e=>{e.classList.remove("active"),e.setAttribute("aria-pressed","false")}),filterStores()}),document.querySelector(".massage-types").addEventListener("click",e=>{e.target.tagName==="BUTTON"&&(document.querySelectorAll(".massage-types button").forEach(e=>{e.classList.remove("active"),e.setAttribute("aria-pressed","false")}),e.target.classList.add("active"),e.target.setAttribute("aria-pressed","true"),filterStores())})}),document.getElementById("nearbyBtn").addEventListener("click",async()=>{if(confirm("가까운 매장을 찾기 위해 위치 정보를 사용하시겠습니까?")&&navigator.geolocation)try{const e=await new Promise((e,t)=>{navigator.geolocation.getCurrentPosition(e,t)});userLocation=e.coords,renderStores(storesData),alert("주변 매장을 찾았습니다.")}catch(e){console.error("위치 정보 오류:",e),alert("위치 정보를 가져올 수 없습니다.")}});</script>
+</body>
+</html>

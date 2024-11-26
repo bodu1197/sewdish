@@ -1,0 +1,336 @@
+[06-Nov-2024 02:00:45] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => ohddyus@gmail.com
+            [createdAt] => 2024-11-03 02:23:10
+            [isAdmin] => 1
+        )
+
+)
+
+[06-Nov-2024 02:00:45] Is Logged In: true
+[06-Nov-2024 02:00:45] User Email: ohddyus@gmail.com
+[06-Nov-2024 02:00:45] Is Admin: true
+[06-Nov-2024 02:01:05] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => ohddyus@gmail.com
+            [createdAt] => 2024-11-03 02:23:10
+            [isAdmin] => 1
+        )
+
+)
+
+[06-Nov-2024 02:01:05] Is Logged In: true
+[06-Nov-2024 02:01:05] User Email: ohddyus@gmail.com
+[06-Nov-2024 02:01:05] Is Admin: true
+[06-Nov-2024 02:01:11] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => ohddyus@gmail.com
+            [createdAt] => 2024-11-03 02:23:10
+            [isAdmin] => 1
+        )
+
+)
+
+[06-Nov-2024 02:01:11] Is Logged In: true
+[06-Nov-2024 02:01:11] User Email: ohddyus@gmail.com
+[06-Nov-2024 02:01:11] Is Admin: true
+[06-Nov-2024 02:03:27] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[06-Nov-2024 02:03:27] Is Logged In: true
+[06-Nov-2024 02:03:27] User Email: 11@gmail.com
+[06-Nov-2024 02:03:27] Is Admin: false
+[06-Nov-2024 02:08:50] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[06-Nov-2024 02:08:50] Is Logged In: true
+[06-Nov-2024 02:08:50] User Email: 11@gmail.com
+[06-Nov-2024 02:08:50] Is Admin: false
+[06-Nov-2024 02:19:59] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[06-Nov-2024 02:19:59] Is Logged In: true
+[06-Nov-2024 02:19:59] User Email: 11@gmail.com
+[06-Nov-2024 02:19:59] Is Admin: false
+[06-Nov-2024 02:26:06] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[06-Nov-2024 02:26:06] Is Logged In: true
+[06-Nov-2024 02:26:06] User Email: 11@gmail.com
+[06-Nov-2024 02:26:06] Is Admin: false
+[06-Nov-2024 02:26:48] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[06-Nov-2024 02:26:48] Is Logged In: true
+[06-Nov-2024 02:26:48] User Email: 11@gmail.com
+[06-Nov-2024 02:26:48] Is Admin: false
+[06-Nov-2024 02:27:13] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[06-Nov-2024 02:27:13] Is Logged In: true
+[06-Nov-2024 02:27:13] User Email: 11@gmail.com
+[06-Nov-2024 02:27:13] Is Admin: false
+[06-Nov-2024 02:27:39] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => ohddyus@gmail.com
+            [createdAt] => 2024-11-03 02:23:10
+            [isAdmin] => 1
+        )
+
+)
+
+[06-Nov-2024 02:27:39] Is Logged In: true
+[06-Nov-2024 02:27:39] User Email: ohddyus@gmail.com
+[06-Nov-2024 02:27:39] Is Admin: true
+[06-Nov-2024 02:28:09] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => ohddyus@gmail.com
+            [createdAt] => 2024-11-03 02:23:10
+            [isAdmin] => 1
+        )
+
+)
+
+[06-Nov-2024 02:28:09] Is Logged In: true
+[06-Nov-2024 02:28:09] User Email: ohddyus@gmail.com
+[06-Nov-2024 02:28:09] Is Admin: true
+[06-Nov-2024 02:30:42] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => ohddyus@gmail.com
+            [createdAt] => 2024-11-03 02:23:10
+            [isAdmin] => 1
+        )
+
+)
+
+[06-Nov-2024 02:30:42] Is Logged In: true
+[06-Nov-2024 02:30:42] User Email: ohddyus@gmail.com
+[06-Nov-2024 02:30:42] Is Admin: true
+[06-Nov-2024 02:31:24] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => ohddyus@gmail.com
+            [createdAt] => 2024-11-03 02:23:10
+            [isAdmin] => 1
+        )
+
+)
+
+[06-Nov-2024 02:31:24] Is Logged In: true
+[06-Nov-2024 02:31:24] User Email: ohddyus@gmail.com
+[06-Nov-2024 02:31:24] Is Admin: true
+[06-Nov-2024 02:32:05] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[06-Nov-2024 02:32:05] Is Logged In: true
+[06-Nov-2024 02:32:05] User Email: 11@gmail.com
+[06-Nov-2024 02:32:05] Is Admin: false
+[06-Nov-2024 02:32:41] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[06-Nov-2024 02:32:41] Is Logged In: true
+[06-Nov-2024 02:32:41] User Email: 11@gmail.com
+[06-Nov-2024 02:32:41] Is Admin: false
+[06-Nov-2024 02:37:10] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[06-Nov-2024 02:37:10] Is Logged In: true
+[06-Nov-2024 02:37:10] User Email: 11@gmail.com
+[06-Nov-2024 02:37:10] Is Admin: false
+[06-Nov-2024 02:37:28] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[06-Nov-2024 02:37:28] Is Logged In: true
+[06-Nov-2024 02:37:28] User Email: 11@gmail.com
+[06-Nov-2024 02:37:28] Is Admin: false
+[06-Nov-2024 02:44:33] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[06-Nov-2024 02:44:33] Is Logged In: true
+[06-Nov-2024 02:44:33] User Email: 11@gmail.com
+[06-Nov-2024 02:44:33] Is Admin: false
+[06-Nov-2024 02:45:08] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[06-Nov-2024 02:45:08] Is Logged In: true
+[06-Nov-2024 02:45:08] User Email: 11@gmail.com
+[06-Nov-2024 02:45:08] Is Admin: false
+[06-Nov-2024 02:46:03] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[06-Nov-2024 02:46:03] Is Logged In: true
+[06-Nov-2024 02:46:03] User Email: 11@gmail.com
+[06-Nov-2024 02:46:03] Is Admin: false
+[06-Nov-2024 02:49:27] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[06-Nov-2024 02:49:27] Is Logged In: true
+[06-Nov-2024 02:49:27] User Email: 11@gmail.com
+[06-Nov-2024 02:49:27] Is Admin: false
+[06-Nov-2024 02:49:31] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[06-Nov-2024 02:49:31] Is Logged In: true
+[06-Nov-2024 02:49:31] User Email: 11@gmail.com
+[06-Nov-2024 02:49:31] Is Admin: false
+[06-Nov-2024 02:49:44] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[06-Nov-2024 02:49:44] Is Logged In: true
+[06-Nov-2024 02:49:44] User Email: 11@gmail.com
+[06-Nov-2024 02:49:44] Is Admin: false
+[06-Nov-2024 02:49:55] Session Data: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[06-Nov-2024 02:49:55] Is Logged In: true
+[06-Nov-2024 02:49:55] User Email: 11@gmail.com
+[06-Nov-2024 02:49:55] Is Admin: false

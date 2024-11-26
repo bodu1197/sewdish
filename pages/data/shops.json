@@ -1,0 +1,76 @@
+{
+    "stores": [
+        {
+            "id": "672a91a19bdb2",
+            "name": "남해 ",
+            "address": {
+                "full": "강원특별자치도 철원군 동송읍 오덕리 2494",
+                "lat": "38.2071429",
+                "lng": "127.20815\""
+            },
+            "phone": "555-5555-5555",
+            "minPrice": 55555555,
+            "types": [
+                "중국"
+            ],
+            "description": "5555555555",
+            "owner": "11@gmail.com",
+            "created_at": "2024-11-06 06:44:01",
+            "photo": "\/pages\/data\/images\/672a91a19bdb2.webp"
+        },
+        {
+            "id": "672a9b7c5a1ae",
+            "name": "남해 ",
+            "address": {
+                "full": "대전 동구 가오동 420-8",
+                "lat": "36.3073167",
+                "lng": "127.4553625\""
+            },
+            "phone": "555-5555-5555",
+            "minPrice": 555,
+            "types": [
+                "중국"
+            ],
+            "description": "55555555",
+            "owner": "11@gmail.com",
+            "created_at": "2024-11-06 07:26:04",
+            "photo": "\/pages\/data\/images\/672a9b7c5a1ae.webp"
+        },
+        {
+            "id": "672a9ba6ae095",
+            "name": "남해 ",
+            "address": {
+                "full": "대구 달서구 갈산동 974",
+                "lat": "35.8421904",
+                "lng": "128.4994625\""
+            },
+            "phone": "444-4444-4444",
+            "minPrice": 444444,
+            "types": [
+                "1인샵"
+            ],
+            "description": "44444444",
+            "owner": "11@gmail.com",
+            "created_at": "2024-11-06 07:26:46",
+            "photo": "\/pages\/data\/images\/672a9ba6ae095.webp"
+        },
+        {
+            "id": "672a9d7bbf6b0",
+            "name": "남해 ",
+            "address": {
+                "full": "경남 남해군 미조면 미조리 548-11",
+                "lat": "34.7120248",
+                "lng": "128.0460335\""
+            },
+            "phone": "000-0000-0000",
+            "minPrice": 111111,
+            "types": [
+                "중국"
+            ],
+            "description": "1111111111",
+            "owner": "11@gmail.com",
+            "created_at": "2024-11-06 07:34:35",
+            "photo": "\/pages\/data\/images\/672a9d7bbf6b0.webp"
+        }
+    ]
+}

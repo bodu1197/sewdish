@@ -1,0 +1,12 @@
+[06-Nov-2024 01:55:17] User found: ohddyus@gmail.com
+[06-Nov-2024 01:55:17] Session data set: Array
+(
+    [user] => Array
+        (
+            [email] => ohddyus@gmail.com
+            [createdAt] => 2024-11-03 02:23:10
+            [isAdmin] => 1
+        )
+
+)
+

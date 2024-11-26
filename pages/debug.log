@@ -1,0 +1,19 @@
+POST 요청 받음: 2024-11-03 02:23:10
+데이터 경로: /kdscall27/www/pages/data/users.json
+디렉토리 생성됨: /kdscall27/www/pages/data
+새 JSON 파일 생성됨
+저장된 데이터: Array
+(
+    [users] => Array
+        (
+            [0] => Array
+                (
+                    [userEmail] => ohddyus@gmail.com
+                    [userPw] => $2y$10$ah0/ECCf..ahIPzosaCdi.qAOGrfb0SFlomYAovOCUSOI6UVIZ4HO
+                    [createdAt] => 2024-11-03 02:23:10
+                )
+
+        )
+
+)
+

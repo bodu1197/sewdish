@@ -1,0 +1,143 @@
+[06-Nov-2024 01:58:07] Login successful: Array
+(
+    [user] => Array
+        (
+            [email] => ohddyus@gmail.com
+            [createdAt] => 2024-11-03 02:23:10
+            [isAdmin] => 1
+        )
+
+)
+
+[06-Nov-2024 02:02:37] Login successful: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 1
+        )
+
+)
+
+[06-Nov-2024 02:03:23] Login successful: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[06-Nov-2024 02:19:42] Login successful: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[06-Nov-2024 02:27:35] Login successful: Array
+(
+    [user] => Array
+        (
+            [email] => ohddyus@gmail.com
+            [createdAt] => 2024-11-03 02:23:10
+            [isAdmin] => 1
+        )
+
+)
+
+[06-Nov-2024 02:32:01] Login successful: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[06-Nov-2024 02:51:36] Login successful: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[06-Nov-2024 05:32:24] Login successful: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[06-Nov-2024 08:32:42] Login successful: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[08-Nov-2024 05:45:30] Login successful: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[08-Nov-2024 05:50:45] Login successful: Array
+(
+    [user] => Array
+        (
+            [email] => ohddyus@gmail.com
+            [createdAt] => 2024-11-03 02:23:10
+            [isAdmin] => 
+        )
+
+)
+
+[08-Nov-2024 05:56:54] Login successful: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
+[08-Nov-2024 06:57:02] Login successful: Array
+(
+    [user] => Array
+        (
+            [email] => 11@gmail.com
+            [createdAt] => 2024-11-03 03:12:17
+            [isAdmin] => 
+        )
+
+)
+
