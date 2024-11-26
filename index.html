@@ -34,7 +34,7 @@ $userEmail = $isLoggedIn ? $_SESSION['user']['email'] : '';
 
     <nav class="dropdown-menu" id="dropdownMenu">
         <ul>
-            <li><a href="/pages/list.html">매장목록</a></li>
+            <li><a href="/sewdish/pages/list.html">매장목록</a></li>
             <li><a href="/pages/register.php">매장등록</a></li>
             <?php if ($isLoggedIn): ?>
                 <li><span><?php echo htmlspecialchars($userEmail); ?></span></li>
